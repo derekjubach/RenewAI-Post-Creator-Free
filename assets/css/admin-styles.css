@@ -1,0 +1,279 @@
+
+/* Settings interface */
+.renewai-pc-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.renewai-pc-wrap h1 {
+  margin-bottom: 20px;
+}
+
+.renewai-pc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.renewai-pc-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.renewai-pc-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.renewai-pc-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.renewai-pc-nav a:hover,
+.renewai-pc-nav a.active {
+  background-color: #f0f0f0;
+}
+
+.renewai-pc-settings-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.renewai-pc-settings-form .renewai-pc-form-table {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.renewai-pc-settings-form .renewai-pc-form-table th {
+  width: 200px;
+}
+
+.renewai-pc-settings-form .renewai-pc-form-table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.renewai-pc-settings-form .renewai-pc-form-table tr {
+  vertical-align: top;
+}
+
+.renewai-pc-settings-form .renewai-pc-form-table tr th {
+  padding-top: 20px;
+}
+
+/* Add some animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.renewai-pc-wrap {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media screen and (max-width: 782px) {
+  .renewai-pc-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .renewai-pc-nav {
+    margin-top: 10px;
+  }
+}
+.renewai-pc-settings-section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.renewai-pc-settings-section h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.renewai-pc-settings-section p.renewai-pc-next-scan-time {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.renewai-pc-api-settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.renewai-pc-api-setting {
+  display: flex;
+  flex-direction: column;
+}
+
+.renewai-pc-api-setting label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.renewai-pc-api-setting input[type="password"] {
+  width: 100%;
+  max-width: 400px;
+}
+
+.renewai-pc-settings-section ul, #renewai-post-creator-meta-box ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.renewai-pc-settings-section ul li, #renewai-post-creator-meta-box ul li {
+  margin-bottom: 10px;
+}
+
+#renewai-title-suggestions h4 {
+  margin-top:0;
+}
+
+/* Alert CSS */
+.renewai-custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.renewai-custom-alert-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.renewai-custom-alert-content p {
+  margin-bottom: 15px;
+}
+
+/* Prompt Library */
+.prompt-library {
+  max-width: 600px;
+}
+
+#prompt_library {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#prompt_preview {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-height: 200px;
+  width: 660px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+#prompt_buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Prompt Modified Message */
+.prompt-modified-message {
+  color: #0073aa;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block
+}
+
+.save-current-prompt {
+  margin-top: 5px;
+}
+
+.save-current-prompt:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Prompt Library Instuctions */
+.renewai-pc-prompt-library-instructions {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.renewai-pc-prompt-library-instructions h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.renewai-pc-prompt-library-instructions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.renewai-pc-prompt-library-instructions li {
+  margin-bottom: 5px;
+}
+
+/* API Additional Setttings */
+.renewai-pc-form-table input[type="number"].small-text {
+  width: 65px;
+}
+
+.renewai-pc-form-table .description {
+  display: inline-block;
+}
+
+/* Suggested Titles */
+.renewai-title-suggestion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.renewai-title-suggestion .dashicons-insert {
+  cursor: pointer;
+  margin-right: 5px;
+  color: #0073aa;
+}
+
+.renewai-title-suggestion .dashicons-insert:hover {
+  color: #00a0d2;
+}
+
+.renewai-title-suggestion .title-text {
+  flex: 1;
+}
