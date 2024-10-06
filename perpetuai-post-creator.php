@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: RenewAI Post Creator Premium
+ * Plugin Name: RenewAI Post Creator Free
  * Description: Generate post content using ChatGPT assistants API.
  * Version: 1.2.1
  * Author: Derek Jubach
