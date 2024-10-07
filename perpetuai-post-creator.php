@@ -3,13 +3,12 @@
 /**
  * Plugin Name: RenewAI Post Creator Free
  * Description: Generate post content using ChatGPT assistants API.
- * Version: 1.2.1
+ * Version: 1.3
  * Author: Derek Jubach
  * Author URI:  https://github.com/derekjubach/RenewAI-Post-Creator-Free
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-
 // Exit if accessed directly
 if (!defined('ABSPATH')) {
   exit;
@@ -34,7 +33,7 @@ if (function_exists('rpc_fs')) {
       global $rpc_fs;
       if (!isset($rpc_fs)) {
         // Include Freemius SDK.
-        require_once dirname(__FILE__) . '/freemius/start.php';
+        require_once dirname(__FILE__) . '/vendor/freemius/wordpress-sdk/start.php';
         $rpc_fs = fs_dynamic_init(array(
           'id'             => '16636',
           'slug'           => 'renewai-post-creator',

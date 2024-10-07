@@ -192,9 +192,6 @@ if (!current_user_can('manage_options')) {
       <hr>
       <h3><?php esc_html_e('Support', 'renewai-post-creator'); ?> </h3>
       <p><?php esc_html_e('For support, please contact us via email.', 'renewai-post-creator'); ?> <a href="mailto:success+support@perpetuaiconsult.com?subject=Support%20Request">Email Support</a></p>
-      <hr>
-      <h3><?php esc_html_e('License', 'renewai-post-creator'); ?></h3>
-      <p><?php esc_html_e('This plugin is licensed under the GPL v2.0 or later.', 'renewai-post-creator'); ?></p>
     </div>
   </div>
 </div>

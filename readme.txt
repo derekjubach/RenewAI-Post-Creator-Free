@@ -3,7 +3,7 @@ Contributors: PerpetuAI Consulting, freemius
 Tags: content generation, AI content, OpenAI, blog posts, Gutenberg
 Requires at least: 5.0
 Tested up to: 6.6
-Stable tag: 1.2.1
+Stable tag: 1.3
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -89,6 +89,9 @@ RenewAI Post Creator uses external AI services, and users are responsible for an
 
 == Changelog ==
 
+= 1.3 =
+Use Composer to manage dependencies and improve security.
+
 = 1.2.1 =
 * Adjustments for WordPress.org compliance
 * Security: Gloabal hardening of functions and security
@@ -106,5 +109,5 @@ RenewAI Post Creator uses external AI services, and users are responsible for an
 
 == Upgrade Notice ==
 
-= 1.2.1 =
-This update includes additional security hardening and bug fixes.
+= 1.3 =
+Use Composer to manage dependencies and improve security.
