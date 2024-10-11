@@ -11,7 +11,7 @@ if ( !current_user_can( 'manage_options' ) ) {
 // Initialize settings update flag
 $settings_updated = false;
 // Define default prompts
-define( 'DEFAULT_PROMPT', 'You are a senior content writer tasked with creating blog posts from a list of keywords or ideas. Structure your content using HTML tags (h2 for main title, h3 for subheadings, and p for paragraphs) to ensure SEO-friendly formatting.' );
+define( 'RENEWAI_PC_DEFAULT_PROMPT', 'You are a senior content writer tasked with creating blog posts from a list of keywords or ideas. Structure your content using HTML tags (h2 for main title, h3 for subheadings, and p for paragraphs) to ensure SEO-friendly formatting.' );
 // Check if form is submitted
 if ( isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST' ) {
     // Update debug mode
@@ -63,7 +63,7 @@ if ( isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST
 $api_provider = get_option( 'renewai_api_provider', 'openai' );
 $openai_api_key = $this->get_api_key( 'openai' );
 $openai_model = get_option( 'renewai_openai_model', 'gpt-4' );
-$openai_system_prompt = get_option( 'renewai_openai_system_prompt', DEFAULT_PROMPT );
+$openai_system_prompt = get_option( 'renewai_openai_system_prompt', RENEWAI_PC_DEFAULT_PROMPT );
 $openai_models_free = $this->get_openai_models__free();
 // Retrieve Debug Mode
 $debug_mode = get_option( 'renewai_debug_mode', 0 );
@@ -90,10 +90,10 @@ foreach ( $providers as $provider ) {
 ?>
 
 <div class="wrap renewai-pc-wrap">
-  <div id="renewai-custom-alert" class="renewai-custom-alert" style="display: none;">
-    <div class="renewai-custom-alert-content">
-      <p id="renewai-custom-alert-message"></p>
-      <button id="renewai-custom-alert-close" class="button"><?php 
+  <div id="renewai-pc-custom-alert" class="renewai-pc-custom-alert" style="display: none;">
+    <div class="renewai-pc-custom-alert-content">
+      <p id="renewai-pc-custom-alert-message"></p>
+      <button id="renewai-pc-custom-alert-close" class="button"><?php 
 esc_html_e( 'Close', 'renewai-post-creator' );
 ?></button>
     </div>
@@ -185,7 +185,7 @@ esc_html_e( 'OpenAI Model', 'renewai-post-creator' );
             <td>
               <select id="renewai_openai_model" name="renewai_openai_model">
                 <?php 
-$models_to_use = ( rpc_fs()->can_use_premium_code__premium_only() ? $openai_models_premium : $openai_models_free );
+$models_to_use = ( renewai_pc_fs()->can_use_premium_code__premium_only() ? $openai_models_premium : $openai_models_free );
 foreach ( $models_to_use as $model ) {
     ?>
                   <option value="<?php 
@@ -199,7 +199,7 @@ foreach ( $models_to_use as $model ) {
 }
 ?>
               </select><br>
-              <p class="description">
+              <p class="renewai-pc-description">
                 <strong><?php 
 esc_html_e( 'Note:', 'renewai-post-creator' );
 ?></strong> <?php 
@@ -220,9 +220,9 @@ esc_html_e( 'to understand the associated usage costs.', 'renewai-post-creator' 
 ?>
               <?php 
 //Upsell
-if ( rpc_fs()->is_not_paying() ) {
+if ( renewai_pc_fs()->is_not_paying() ) {
     echo '<div class="upgrade-notice">
-                <h4>' . esc_html__( 'Need access to more models? Upgrade now to access all of the OpenAI models, unlock new features and support Perplexity, Anthropic and Google Gemini! ', 'renewai-post-creator' ) . '<a href="' . esc_url( rpc_fs()->get_upgrade_url() ) . '">' . esc_html__( 'Upgrade Now!', 'renewai-post-creator' ) . '</a></h4>
+                <h4>' . esc_html__( 'Need access to more models? Upgrade now to access all of the OpenAI models, unlock new features and support Perplexity, Anthropic and Google Gemini! ', 'renewai-post-creator' ) . '<a href="' . esc_url( renewai_pc_fs()->get_upgrade_url() ) . '">' . esc_html__( 'Upgrade Now!', 'renewai-post-creator' ) . '</a></h4>
                 </div>';
 }
 ?>
@@ -243,7 +243,7 @@ esc_html_e( 'Max Tokens', 'renewai-post-creator' );
 echo esc_attr( get_option( 'renewai_openai_max_tokens', '1000' ) );
 ?>"
                     min="1" max="4096" step="1" class="small-text"><br>
-                  <p class="description"><?php 
+                  <p class="renewai-pc-description"><?php 
 esc_html_e( 'Maximum number of tokens to generate (1-4096)', 'renewai-post-creator' );
 ?></p>
                 </div>
@@ -256,7 +256,7 @@ esc_html_e( 'Temperature', 'renewai-post-creator' );
 echo esc_attr( get_option( 'renewai_openai_temperature', '0.7' ) );
 ?>"
                     min="0" max="1" step="0.1" class="small-text"><br>
-                  <p class="description"><?php 
+                  <p class="renewai-pc-description"><?php 
 esc_html_e( 'Controls randomness (0-1, lower is more deterministic)', 'renewai-post-creator' );
 ?></p>
                 </div>
@@ -271,12 +271,12 @@ esc_html_e( 'OpenAI System Prompt', 'renewai-post-creator' );
               <textarea id="renewai_openai_system_prompt" name="renewai_openai_system_prompt" rows="10" cols="50" class="large-text"><?php 
 echo esc_textarea( wp_unslash( $openai_system_prompt ) );
 ?></textarea>
-              <p class="description"><?php 
+              <p class="renewai-pc-description"><?php 
 esc_html_e( 'Enter the system prompt for OpenAI.', 'renewai-post-creator' );
 ?></p>
 
               <?php 
-if ( rpc_fs()->is_not_paying() ) {
+if ( renewai_pc_fs()->is_not_paying() ) {
     ?>
                 <p><?php 
     esc_html_e( 'Note: After editing a prompt, be sure to click the Save Changes button at the bottom of the page', 'renewai-post-creator' );
@@ -350,14 +350,14 @@ checked( $debug_mode, 1 );
 esc_html_e( 'When enabled, debug information will be written to the log file.', 'renewai-post-creator' );
 ?></span>
             <?php 
-if ( file_exists( RENEAI_PC__PLUGIN_DIR . '/renewai-log.txt' ) ) {
+if ( file_exists( RENEWAI_PC__PLUGIN_DIR . '/renewai-log.txt' ) ) {
     ?>
               <p>
                 <?php 
     if ( $debug_mode ) {
         ?>
                   <a href="<?php 
-        echo esc_url( RENEAI_PC__PLUGIN_URL . '/renewai-log.txt' );
+        echo esc_url( RENEWAI_PC__PLUGIN_URL . '/renewai-log.txt' );
         ?>" target="_blank" class="button">View Log File</a>
                 <?php 
     }

@@ -1,8 +1,7 @@
 <?php
 // Exit if accessed directly
-if (!defined('ABSPATH')) {
-  exit;
-}
+if (!defined('ABSPATH')) exit;
+
 //Do you have permission to be here
 if (!current_user_can('manage_options')) {
   wp_die('You do not have sufficient permissions to access this page.');
@@ -40,10 +39,10 @@ if (!current_user_can('manage_options')) {
       <h3><?php esc_html_e('Note on API Pricing:', 'renewai-post-creator'); ?></h3>
       <p><?php esc_html_e('RenewAI Post Creator uses external AI services, and users are responsible for any associated API costs. Please review the pricing details for each provider:', 'renewai-post-creator'); ?></p>
       <ul>
-        <li><?php esc_html_e('OpenAI: ', 'renewai-post-creator'); ?> <a href="https://openai.com/api/pricing/" target="_blank">https://openai.com/api/pricing/</a> </li>
-        <li><?php esc_html_e('Anthropic (Premium only): ', 'renewai-post-creator'); ?> <a href="https://www.anthropic.com/pricing#anthropic-api" target="_blank">https://www.anthropic.com/pricing#anthropic-api</a></li>
-        <li><?php esc_html_e('Gemini (Premium only): ', 'renewai-post-creator'); ?> <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/pricing" target="_blank">https://cloud.google.com/vertex-ai/docs/generative-ai/pricing</a></li>
-        <li><?php esc_html_e('Perplexity (Premium only): ', 'renewai-post-creator'); ?> <a href="https://docs.perplexity.ai/guides/pricing" target="_blank">https://docs.perplexity.ai/guides/pricing</a></li>
+        <li><?php esc_html_e('OpenAI: ', 'renewai-post-creator'); ?> <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('OpenAI Pricing', 'renewai-post-creator'); ?></a> </li>
+        <li><?php esc_html_e('Anthropic (Premium only): ', 'renewai-post-creator'); ?> <a href="https://www.anthropic.com/pricing#anthropic-api" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Anthropic Pricing', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Gemini (Premium only): ', 'renewai-post-creator'); ?> <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/pricing" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Gemini Pricing', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Perplexity (Premium only): ', 'renewai-post-creator'); ?> <a href="https://docs.perplexity.ai/guides/pricing" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Perplexity Pricing', 'renewai-post-creator'); ?></a></li>
       </ul>
       <p><?php esc_html_e('API usage and costs are determined by the respective providers and may change. We recommend reviewing their pricing pages for the most up-to-date information.', 'renewai-post-creator'); ?></p>
       <hr>
@@ -85,7 +84,7 @@ if (!current_user_can('manage_options')) {
 
       <h4><?php esc_html_e('OpenAI (Free Version)', 'renewai-post-creator'); ?></h4>
       <ol>
-        <li><?php esc_html_e('Visit the', 'renewai-post-creator'); ?> <a href="https://platform.openai.com/signup" target="_blank"><?php esc_html_e('OpenAI website', 'renewai-post-creator'); ?></a> <?php esc_html_e('and sign up for an account.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Visit the', 'renewai-post-creator'); ?> <a href="https://platform.openai.com/signup" target="_blank" rel="noopener noreferrer"><?php esc_html_e('OpenAI website', 'renewai-post-creator'); ?></a> <?php esc_html_e('and sign up for an account.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Once logged in, navigate to the API section.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Create a new API key and copy it.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Paste the API key into the OpenAI API Key field in the plugin settings and click "Save Changes".', 'renewai-post-creator'); ?></li>
@@ -93,7 +92,7 @@ if (!current_user_can('manage_options')) {
 
       <h4><?php esc_html_e('Anthropic (Premium Version)', 'renewai-post-creator'); ?></h4>
       <ol>
-        <li><?php esc_html_e('Go to the', 'renewai-post-creator'); ?> <a href="https://www.anthropic.com" target="_blank"><?php esc_html_e('Anthropic website', 'renewai-post-creator'); ?></a> <?php esc_html_e('and sign up for an account.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Go to the', 'renewai-post-creator'); ?> <a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Anthropic website', 'renewai-post-creator'); ?></a> <?php esc_html_e('and sign up for an account.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Navigate to the API section in your account dashboard.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Generate a new API key and copy it.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Enter the API key in the Anthropic API Key field in the plugin settings and click "Save Changes".', 'renewai-post-creator'); ?></li>
@@ -101,7 +100,7 @@ if (!current_user_can('manage_options')) {
 
       <h4><?php esc_html_e('Gemini (Premium Version)', 'renewai-post-creator'); ?></h4>
       <ol>
-        <li><?php esc_html_e('Visit the', 'renewai-post-creator'); ?> <a href="https://makersuite.google.com/app/apikey" target="_blank"><?php esc_html_e('Google AI Studio', 'renewai-post-creator'); ?></a> <?php esc_html_e('and sign in with your Google account.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Visit the', 'renewai-post-creator'); ?> <a href="https://makersuite.google.com/app/apikey" target="_blank" rel="noopener noreferrer" rel="noopener noreferrer"><?php esc_html_e('Google AI Studio', 'renewai-post-creator'); ?></a> <?php esc_html_e('and sign in with your Google account.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Click on "Get API key" and create a new API key.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Copy the generated API key.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Paste the API key into the Gemini API Key field in the plugin settings and click "Save Changes".', 'renewai-post-creator'); ?></li>
@@ -109,7 +108,7 @@ if (!current_user_can('manage_options')) {
 
       <h4><?php esc_html_e('Perplexity (Premium Version)', 'renewai-post-creator'); ?></h4>
       <ol>
-        <li><?php esc_html_e('Go to the', 'renewai-post-creator'); ?> <a href="https://www.perplexity.ai" target="_blank"><?php esc_html_e('Perplexity AI website', 'renewai-post-creator'); ?></a> <?php esc_html_e('and create an account.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Go to the', 'renewai-post-creator'); ?> <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Perplexity AI website', 'renewai-post-creator'); ?></a> <?php esc_html_e('and create an account.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Navigate to the API section in your account settings.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Generate a new API key and copy it.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Enter the API key in the Perplexity API Key field in the plugin settings and click "Save Changes".', 'renewai-post-creator'); ?></li>
@@ -189,6 +188,43 @@ if (!current_user_can('manage_options')) {
       <p><?php esc_html_e('A: No, the free version only supports OpenAI. To use multiple providers, you\'ll need to upgrade to the premium version.', 'renewai-post-creator'); ?></p>
       <h4><?php esc_html_e('Q: What happens if the API provider is down?', 'renewai-post-creator'); ?></h4>
       <p><?php esc_html_e('A: The plugin will log an error message, and content generation will not be possible until the service is restored.', 'renewai-post-creator'); ?></p>
+      <hr>
+      <h3><?php esc_html_e('Third-Party Services', 'renewai-post-creator'); ?></h3>
+      <p><?php esc_html_e('This plugin uses the following third-party services:', 'renewai-post-creator'); ?></p>
+      <h4><?php esc_html_e('OpenAI API (Free & Premium Versions)', 'renewai-post-creator'); ?></h4>
+      <ul>
+        <li><?php esc_html_e('Purpose: Used for generating blog post content.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Circumstances of use: When a user requests content generation within the WordPress admin area.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('OpenAI website:', 'renewai-post-creator'); ?> <a href="https://openai.com/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('OpenAI', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Terms of Service:', 'renewai-post-creator'); ?> <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Terms of Use', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Privacy Policy:', 'renewai-post-creator'); ?> <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Privacy Policy', 'renewai-post-creator'); ?></a></li>
+      </ul>
+      <h4><?php esc_html_e('Anthropic API (Premium Version Only)', 'renewai-post-creator'); ?></h4>
+      <ul>
+        <li><?php esc_html_e('Purpose: Used for generating blog post content.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Circumstances of use: When a premium user requests content generation using Anthropic\'s models.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Anthropic website:', 'renewai-post-creator'); ?> <a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Anthropic', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Terms of Service:', 'renewai-post-creator'); ?> <a href="https://www.anthropic.com/legal/consumer-terms" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Consumer Terms', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Privacy Policy:', 'renewai-post-creator'); ?> <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Privacy Policy', 'renewai-post-creator'); ?></a></li>
+      </ul>
+      <h4><?php esc_html_e('Google Gemini API (Premium Version Only)', 'renewai-post-creator'); ?></h4>
+      <ul>
+        <li><?php esc_html_e('Purpose: Used for generating blog post content.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Circumstances of use: When a premium user requests content generation using Google\'s Gemini models.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Google Gemini website:', 'renewai-post-creator'); ?> <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Gemini', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Terms of Service:', 'renewai-post-creator'); ?> <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Terms of Service', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Privacy Policy:', 'renewai-post-creator'); ?> <a href="https://support.google.com/gemini/answer/13594961" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Privacy Policy', 'renewai-post-creator'); ?></a></li>
+      </ul>
+      <h4><?php esc_html_e('Perplexity API (Premium Version Only)', 'renewai-post-creator'); ?></h4>
+      <ul>
+        <li><?php esc_html_e('Purpose: Used for generating blog post content.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Circumstances of use: When a premium user requests content generation using Perplexity\'s models.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Perplexity website:', 'renewai-post-creator'); ?> <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Perplexity', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Terms of Service:', 'renewai-post-creator'); ?> <a href="https://www.perplexity.ai/hub/legal/terms-of-service" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Terms of Service', 'renewai-post-creator'); ?></a></li>
+        <li><?php esc_html_e('Privacy Policy:', 'renewai-post-creator'); ?> <a href="https://www.perplexity.ai/hub/legal/privacy-policy" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Privacy Policy', 'renewai-post-creator'); ?></a></li>
+      </ul>
+      <p><?php esc_html_e('Please note that by using this plugin, you are agreeing to share certain data with these external services. The free version only uses OpenAI, while the premium version provides access to all listed services. Ensure you are compliant with any relevant data protection regulations in your jurisdiction when using these services.', 'renewai-post-creator'); ?></p>
+      <p><?php esc_html_e('For more detailed information about the premium version\'s features and services, please refer to our website or contact our support team.', 'renewai-post-creator'); ?></p>
       <hr>
       <h3><?php esc_html_e('Support', 'renewai-post-creator'); ?> </h3>
       <p><?php esc_html_e('For support, please contact us via email.', 'renewai-post-creator'); ?> <a href="mailto:success+support@perpetuaiconsult.com?subject=Support%20Request">Email Support</a></p>

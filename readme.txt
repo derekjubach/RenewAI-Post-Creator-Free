@@ -1,9 +1,9 @@
 === RenewAI Post Creator ===
 Contributors: PerpetuAI Consulting, freemius
-Tags: content generation, AI content, OpenAI, blog posts, Gutenberg
+Tags: content generation, AI content, OpenAI, Gemini, Perplexity, Anthropic, blog posts, Gutenberg
 Requires at least: 5.0
 Tested up to: 6.6
-Stable tag: 1.3
+Stable tag: 1.3.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -73,10 +73,46 @@ Note on API Pricing:
 
 RenewAI Post Creator uses external AI services, and users are responsible for any associated API costs. Please review the pricing details for each provider:
 
-- OpenAI: https://openai.com/api/pricing/
-- Anthropic (Premium only): https://www.anthropic.com/pricing#anthropic-api
-- Gemini (Premium only): https://cloud.google.com/vertex-ai/docs/generative-ai/pricing
-- Perplexity (Premium only): https://docs.perplexity.ai/guides/pricing
+- [OpenAI](https://openai.com/api/pricing/)
+- [Anthropic](https://www.anthropic.com/pricing#anthropic-api)
+- [Gemini](https://cloud.google.com/vertex-ai/docs/generative-ai/pricing)
+- [Perplexity](https://docs.perplexity.ai/guides/pricing)
+
+== Third-Party Services ==
+
+This plugin uses the following third-party services:
+
+1. OpenAI API (Free & Premium Versions)
+   - Purpose: Used for generating blog post content.
+   - Circumstances of use: When a user requests content generation within the WordPress admin area.
+   - [OpenAI website](https://openai.com/)
+   - [Terms of Service](https://openai.com/policies/terms-of-use)
+   - [Privacy Policy](https://openai.com/policies/privacy-policy)
+
+2. Anthropic API (Premium Version Only)
+   - Purpose: Used for generating blog post content.
+   - Circumstances of use: When a premium user requests content generation using Anthropic's models.
+   - [Anthropic website](https://www.anthropic.com/)
+   - [Terms of Service](https://www.anthropic.com/legal/consumer-terms)
+   - [Privacy Policy](https://www.anthropic.com/legal/privacy)
+
+3. Google GeminiGoogle Gemini API (Premium Version Only)
+   - Purpose: Used for generating blog post content.
+   - Circumstances of use: When a premium user requests content generation using Google's Gemini models.
+   - [Google Gemini website](https://gemini.google.com)
+   - [Terms of Service](https://ai.google.dev/gemini-api/terms)
+   - [Privacy Policy](https://support.google.com/gemini/answer/13594961)
+
+4. Perplexity API (Premium Version Only)
+   - Purpose: Used for generating blog post content.
+   - Circumstances of use: When a premium user requests content generation using Perplexity's models.
+   - [Perplexity website](https://www.perplexity.ai/)
+   - [Terms of Service](https://www.perplexity.ai/hub/legal/terms-of-service)
+   - [Privacy Policy](https://www.perplexity.ai/hub/legal/privacy-policy)
+
+Please note that by using this plugin, you are agreeing to share certain data with these external services. The free version only uses OpenAI, while the premium version provides access to all listed services. Ensure you are compliant with any relevant data protection regulations in your jurisdiction when using these services.
+
+For more detailed information about the premium version's features and services, please refer to our website or contact our support team.
 
 == Screenshots ==
 
@@ -88,6 +124,12 @@ RenewAI Post Creator uses external AI services, and users are responsible for an
 6. Help and Support screen
 
 == Changelog ==
+
+= 1.3.2 =
+Allow meta box on pages as well as posts.
+
+= 1.3.1 =
+Additional adjustments for WordPress.org compliance.
 
 = 1.3 =
 Use Composer to manage dependencies and improve security.
@@ -109,5 +151,5 @@ Use Composer to manage dependencies and improve security.
 
 == Upgrade Notice ==
 
-= 1.3 =
-Use Composer to manage dependencies and improve security.
+= 1.3.2 =
+Allow meta box on pages as well as posts.
