@@ -93,10 +93,10 @@ if ( !empty( $openai_api_key ) ) {
 }
 ?>
             <?php 
-if ( rpc_fs()->is_not_paying() ) {
+if ( renewai_pc_fs()->is_not_paying() ) {
     echo '<div class="upgrade-notice">
               <h4>' . esc_html__( 'Upgrade now to add support for Anthropic, Google Gemini and Perplexity!', 'renewai-post-creator' ) . '</h4>';
-    echo '<a href="' . esc_url( rpc_fs()->get_upgrade_url() ) . '">' . esc_html__( 'Upgrade Now!', 'renewai-post-creator' ) . '</a>';
+    echo '<a href="' . esc_url( renewai_pc_fs()->get_upgrade_url() ) . '">' . esc_html__( 'Upgrade Now!', 'renewai-post-creator' ) . '</a>';
     echo '</div>';
 }
 ?>
@@ -111,22 +111,3 @@ submit_button( 'Update API Keys', 'primary', 'renewai_update_api_keys' );
 ?>
   </form>
 </div>
-
-<script>
-  //Toggle the API key field
-  function toggleApiKeyField(provider) {
-    var fieldId = 'renewai_' + provider + '_api_key';
-    var field = document.getElementById(fieldId);
-    var button = field.nextElementSibling;
-
-    if (field.value === '••••••••••••••••••••••••••••••••') {
-      field.value = '';
-      field.type = 'text';
-      button.textContent = 'Cancel';
-    } else {
-      field.value = '••••••••••••••••••••••••••••••••';
-      field.type = 'password';
-      button.textContent = 'Change API Key';
-    }
-  }
-</script>
