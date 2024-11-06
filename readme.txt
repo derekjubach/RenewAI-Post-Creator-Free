@@ -2,8 +2,8 @@
 Contributors: PerpetuAI Consulting, freemius
 Tags: content generation, AI content, OpenAI, Gemini, Perplexity, Anthropic, blog posts, Gutenberg
 Requires at least: 5.0
-Tested up to: 6.6
-Stable tag: 1.3.2
+Tested up to: 6.7
+Stable tag: 1.3.3
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,9 @@ For more detailed information about the premium version's features and services,
 
 == Changelog ==
 
+= 1.3.3 =
+* Compatibility for WordPress 6.7
+
 = 1.3.2 =
 Allow meta box on pages as well as posts.
 
@@ -151,5 +154,5 @@ Use Composer to manage dependencies and improve security.
 
 == Upgrade Notice ==
 
-= 1.3.2 =
-Allow meta box on pages as well as posts.
+= 1.3.3 =
+* Compatibility for WordPress 6.7
