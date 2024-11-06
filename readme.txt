@@ -1,9 +1,9 @@
 === RenewAI Post Creator ===
 Contributors: PerpetuAI Consulting, freemius
-Tags: content generation, AI content, OpenAI, Gemini, Perplexity, Anthropic, blog posts, Gutenberg
+Tags: content generation, AI content generation, OpenAI, Gemini, Perplexity, Anthropic
 Requires at least: 5.0
 Tested up to: 6.7
-Stable tag: 1.3.3
+Stable tag: 1.4
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,7 @@ RenewAI Post Creator is a powerful WordPress plugin that leverages advanced AI m
 Key Features:
 
 * Free Version:
-  - Support for OpenAI API GPT 4, GPT 4 Turbo, GPT 3.5 Turbo 
+  - Support for OpenAI API GPT 4o, GPT 4o Mini, GPT 4, GPT 4 Turbo, GPT 3.5 Turbo 
   - Easy-to-use interface integrated into the WordPress post and page editors
   - Customizable system prompts for OpenAI
   - Debug mode for troubleshooting
@@ -125,6 +125,9 @@ For more detailed information about the premium version's features and services,
 
 == Changelog ==
 
+= 1.4 =
+* Added support for GPT-4o and GPT-4o Mini
+
 = 1.3.3 =
 * Compatibility for WordPress 6.7
 
@@ -154,5 +157,5 @@ Use Composer to manage dependencies and improve security.
 
 == Upgrade Notice ==
 
-= 1.3.3 =
-* Compatibility for WordPress 6.7
+= 1.4 =
+* Added support for GPT-4o and GPT-4o Mini
