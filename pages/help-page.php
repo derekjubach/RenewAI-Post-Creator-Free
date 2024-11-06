@@ -24,7 +24,7 @@ if (!current_user_can('manage_options')) {
       <h3><?php esc_html_e('Key Features', 'renewai-post-creator'); ?></h3>
       <h4><?php esc_html_e('Free Version:', 'renewai-post-creator'); ?></h4>
       <ul>
-        <li><?php esc_html_e('Support for OpenAI API GPT 4o, GPT 4o Mini, GPT 4, GPT 4 Turbo, GPT 3.5 Turbo.', 'renewai-post-creator'); ?></li>
+        <li><?php esc_html_e('Support for OpenAI API GPT 4, GPT 4 Turbo, GPT 3.5 Turbo.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('User-friendly settings page for secure API key management and model selection.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Meta box in the post and page editors for easy content generation.', 'renewai-post-creator'); ?></li>
         <li><?php esc_html_e('Logging functionality for debugging and monitoring.', 'renewai-post-creator'); ?></li>
