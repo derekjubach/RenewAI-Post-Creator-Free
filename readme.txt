@@ -155,4 +155,4 @@ Use Composer to manage dependencies and improve security.
 == Upgrade Notice ==
 
 = 1.3.3 =
-* Compatibility for WordPress 6.7
+Compatibility for WordPress 6.7
