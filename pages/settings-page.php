@@ -362,7 +362,7 @@ if ( file_exists( RENEWAI_PC__PLUGIN_DIR . '/renewai-log.txt' ) ) {
                 <?php 
     }
     ?>
-                <button id="delete-log-file" class="button">Delete Log File</button>
+                <button id="renewai-pc-delete-log-file" class="button">Delete Log File</button>
               </p>
             <?php 
 } else {
