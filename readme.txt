@@ -1,5 +1,5 @@
 === RenewAI Post Creator ===
-Contributors: PerpetuAI Consulting, freemius
+Contributors: FullScope, freemius
 Tags: content generation, AI content, OpenAI, Gemini, Perplexity, Anthropic, blog posts, Gutenberg
 Requires at least: 5.0
 Tested up to: 6.7
