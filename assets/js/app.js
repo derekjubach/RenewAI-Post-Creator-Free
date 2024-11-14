@@ -174,7 +174,7 @@ jQuery(document).ready(function ($) {
 	
 
 	// Delete log file
-	$('#delete-log-file').on('click', function (e) {
+	$('#renewai-pc-delete-log-file').on('click', function (e) {
 		e.preventDefault();
 		if (confirm('Are you sure you want to delete the log file?')) {
 			$.ajax({
