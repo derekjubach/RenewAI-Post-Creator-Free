@@ -3,7 +3,7 @@ Contributors: djubach, freemius
 Tags: content generation, AI content, OpenAI, Gemini, Perplexity, Anthropic, blog posts, Gutenberg
 Requires at least: 5.0
 Tested up to: 6.7
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,9 @@ For more detailed information about the premium version's features and services,
 
 == Changelog ==
 
+= 1.3.5 =
+* Updated Freemius SDK to the latest version
+
 = 1.3.4 =
 * Fixed issue with prompt library Add/Delete buttons (Premium)
 * Namespace update for delete log file button
@@ -160,8 +163,5 @@ Use Composer to manage dependencies and improve security.
 
 == Upgrade Notice ==
 
-= 1.3.4 =
-Fixed issue with prompt library Add/Delete buttons (Premium)
-Namespace update for delete log file button
-Author and Author URI updated to FullScope (Premium)
-Updated Freemius SDK to version 2.9.0
+= 1.3.5 =
+* Updated Freemius SDK to the latest version
