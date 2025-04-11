@@ -3,7 +3,7 @@
 /**
  * Plugin Name: RenewAI Post Creator
  * Description: Generate high-quality blog post content using AI models from OpenAI, with premium features for Anthropic, Google Gemini and Perplexity.
- * Version: 1.3.5
+ * Version: 1.3.6
  * Author: Derek Jubach
  * Author URI:  https://github.com/derekjubach/RenewAI-Post-Creator-Free
  * License:     GPLv2 or later
