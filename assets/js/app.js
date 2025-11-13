@@ -92,9 +92,18 @@ jQuery(document).ready(function ($) {
 						);
 					}
 				} else {
-					$status.html(
-						'<p>Error: Unable to generate content. Please try again.</p>'
-					);
+					// Handle error responses with detailed messages
+					var errorMessage = 'Error: Unable to generate content. Please try again.';
+					
+					if (response.data && response.data.message) {
+						// Use the detailed error message from the backend
+						errorMessage = 'Error: ' + response.data.message;
+					} else if (response.data && response.data.error) {
+						// Fallback to generic error field
+						errorMessage = 'Error: ' + response.data.error;
+					}
+					
+					$status.html('<p class="renewai-error-message">' + errorMessage + '</p>');
 				}
 			},
 			error: function (jqXHR, textStatus, errorThrown) {
