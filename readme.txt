@@ -16,7 +16,7 @@ RenewAI Post Creator is a powerful WordPress plugin that leverages advanced AI m
 Key Features:
 
 * Free Version:
-  - Support for OpenAI API GPT 4, GPT 4 Turbo, GPT 3.5 Turbo 
+  - Support for OpenAI API GPT 4o-mini, GPT 4, GPT 3.5 Turbo 
   - Easy-to-use interface integrated into the WordPress post and page editors
   - Customizable system prompts for OpenAI
   - Debug mode for troubleshooting
